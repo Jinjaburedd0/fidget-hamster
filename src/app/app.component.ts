@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'click-project';
+  clicks: number = 0;
+
+  incrementClicks() {
+    this.clicks++;
+    const scaleFactor = 1 + (Math.floor(this.clicks / 10) * 0.1);
+    (document.querySelector('.hamster-button') as HTMLElement)?.style.setProperty('--scale-factor', scaleFactor.toString());
+  }
 }

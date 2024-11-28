@@ -1,0 +1,50 @@
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  gap: 2rem;
+}
+
+.counter {
+  font-size: 6rem;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hamster-button {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 200px;
+  height: auto;
+  scale: var(--scale-factor, 1);
+}
+
+@keyframes spin {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+.spinning {
+  animation: spin 0.5s linear;
+}
+
+.hamster-button:hover {
+  scale: 1.1;
+}
+
+.hamster-button:active {
+  scale: 1;
+}
+
+.size-bump {
+  transform: scale(1.2);
+}
