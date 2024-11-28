@@ -32,7 +32,7 @@
             ],
             "scripts": [],
             "server": "src/main.server.ts",
-            "outputMode": "server",
+            "outputMode": "static",
             "ssr": {
               "entry": "src/server.ts"
             }
@@ -98,7 +98,12 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/fidget-hamster/",
+            "name": "Jinjaburedd0",
+            "email": "aiongamefan@gmail.com"
+          }
         }
       }
     }
