@@ -2,5 +2,6 @@
   <div class="counter">{{ clicks }}</div>
   <img src="assets/hamster.png" alt="Clickable Hamster" class="hamster-button"
     [class.spinning]="clicks % 10 === 0 && clicks > 0"
-    (click)="incrementClicks()">
+    (click)="incrementClicks()"
+    style="user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;">
 </main>
