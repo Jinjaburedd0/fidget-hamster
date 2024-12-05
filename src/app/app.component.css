@@ -7,6 +7,8 @@ main {
   align-items: center;
   background: linear-gradient(135deg, #2ecc71, #27ae60);
   gap: 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .counter {
@@ -45,6 +47,9 @@ main {
   scale: 1;
 }
 
-.size-bump {
-  transform: scale(1.2);
+.explosion-particle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1000;
+  transform-origin: center;
 }
